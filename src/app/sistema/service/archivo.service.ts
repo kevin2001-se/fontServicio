@@ -20,7 +20,7 @@ export class ArchivoService {
   }
 
   listarArchivo(id: number):Observable<any>{
-    return this.http.get<any>(url+'?id='+id);
+    return this.http.get<any>(url+'/'+id);
   }
 
 
