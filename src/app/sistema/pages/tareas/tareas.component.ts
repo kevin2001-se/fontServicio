@@ -19,7 +19,7 @@ export interface PeriodicElement {
 let ELEMENT_DATA: Tarea[] = [
 ];
 
-
+let numeber = JSON.parse(localStorage.getItem("auth")!);
 @Component({
   selector: 'app-tareas',
   templateUrl: './tareas.component.html',
@@ -47,7 +47,7 @@ export class TareasComponent implements AfterViewInit,OnInit {
   tarea: Tarea = {
     nombre: "",
     usuario: {
-      codigoUsu: 1
+      codigoUsu: numeber.codigoUsu
     },
     descripcion: "",
     fechaTarea: ""
@@ -81,6 +81,14 @@ export class TareasComponent implements AfterViewInit,OnInit {
             console.log(resp)
             if(resp.nombre !== ""){
               this.listar()
+              this.tarea = {
+                nombre: "",
+                usuario: {
+                  codigoUsu: numeber.codigoUsu
+                },
+                descripcion: "",
+                fechaTarea: ""
+              }
             }
           }
         )

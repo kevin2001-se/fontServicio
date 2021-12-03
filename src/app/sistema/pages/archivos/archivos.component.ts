@@ -14,6 +14,8 @@ export class ArchivosComponent implements OnInit {
 
   lista:any[] = []
 
+  tamano:string = ""
+
   constructor(private archivoService: ArchivoService,private route: Router) { }
 
   ngOnInit(): void {
@@ -24,11 +26,13 @@ export class ArchivosComponent implements OnInit {
   }
   listar(){
     let numeber = JSON.parse(localStorage.getItem("auth")!);
+    console.log(numeber.codigoUsu)
     this.archivoService.listarArchivo(numeber.codigoUsu).subscribe(
       resp => {
-        console.log(resp)
+
         this.listaVacia = true;
         this.lista = resp;
+        console.log(this.lista )
       }
     )
   }
