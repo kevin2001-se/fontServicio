@@ -1,0 +1,45 @@
+.card-tarjeta{
+  display: flex;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.card-tarjeta.archivo{
+  background-color: #3498db;
+}
+
+.card-tarjeta.tarea{
+  background-color: #2ecc71;
+}
+
+.card-tarjeta.almacenamiento{
+  background-color: #e67e22;
+}
+
+
+.card-tarjeta .card-body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-tarjeta .card-body div:nth-child(1){
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+}
+
+.card-tarjeta .card-body div:nth-child(2) span{
+  display: block;
+}
+
+.card-tarjeta .card-body div span:nth-child(1){
+  font-size: 1.3em;
+}
+
+
+.card-tarjeta:hover{
+  margin-top: -10px;
+  margin-left: -10px;
+  box-shadow: 3px 6px 5px 2px #b1afaf;
+}

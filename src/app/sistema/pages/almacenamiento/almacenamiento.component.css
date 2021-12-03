@@ -1,0 +1,18 @@
+.almacenamiento{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.almacenamiento i{
+  font-size: 7em;
+  color: #2980b9;
+  margin-bottom: 15px;
+}
+
+.almacenamiento span{
+  text-transform: uppercase;
+  font-size: 1.2em;
+}

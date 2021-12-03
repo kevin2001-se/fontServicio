@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>ACTUALZIAR USUARIO</h2>
+<mat-dialog-content class="mat-typography" style="width: 350px;">
+  <form action="">
+    <input type="hidden" name="id" [(ngModel)]="data.datas.codigoUsu">
+    <div class="mb-2">
+      <label class="mb-1" for="nombre">Nombre de Usuario</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="data.datas.nombre">
+    </div>
+    <div class="mb-2">
+      <label class="mb-1" for="email">Correo Usuario</label>
+      <input type="email" name="email" id="email" class="form-control" [(ngModel)]="data.datas.correo">
+    </div>
+    <div class="mb-2">
+      <label class="mb-1" for="pass">Contraseña Usuario</label>
+      <input type="password" name="pass" id="pass" class="form-control" [(ngModel)]="data.pass">
+    </div>
+    <input type="hidden" name="pass2" [(ngModel)]="data.datas.contrasena">
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Actualizar</button>
+</mat-dialog-actions>

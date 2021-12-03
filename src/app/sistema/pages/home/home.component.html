@@ -1,0 +1,38 @@
+
+<mat-sidenav-container fullscreen>
+
+  <mat-sidenav #sidenav mode="side" opened>
+
+    <mat-toolbar color="primary">
+      <h1 class="title-side"><i class="fab fa-gripfire"></i> FlashDrive</h1>
+      <span class="space"></span>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item class="list-item" [routerLink]="['sistema']"><i class="fas fa-home"></i> Inicio</a>
+      <a mat-list-item class="list-item" [routerLink]="['archivo']"><i class="far fa-file-archive"></i> Mis Archivos</a>
+      <a mat-list-item class="list-item" [routerLink]="['tareas']"><i class="fas fa-briefcase"></i> Mis Tareas</a>
+      <a mat-list-item class="list-item" [routerLink]="['almacenamiento']"><i class="fas fa-database"></i> Almacenamiento</a>
+      <a mat-list-item class="list-item" (click)="openDialogConf()"><i class="fas fa-cog"></i> Configuración</a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="mr-2" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Dashboard</h1>
+    <span class="space"></span>
+    <span class="mx-3">{{ usuario.nombre }}</span><button mat-raised-button color="warn" (click)="cerrar()">Cerrar Sesión</button>
+  </mat-toolbar>
+
+  <div class="container-fluid mt-4">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</mat-sidenav-container>
+
+
+<app-modal-archivo></app-modal-archivo>

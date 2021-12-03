@@ -1,0 +1,30 @@
+button:focus {
+  outline: none;
+  outline: none;
+}
+
+.title-side{
+  font-family: 'Lobster', cursive;
+  width: 210px !important;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.title-side i{
+  font-size: 27px;
+}
+
+mat-nav-list a{
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #34495e;
+}
+
+mat-nav-list a i{
+  margin-right: 5px;
+}
+
+.space{
+  flex: 1 1 auto;
+}

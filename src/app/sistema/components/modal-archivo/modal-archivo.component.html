@@ -1,0 +1,19 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Archivos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="ctn-file">
+            <i class="fas fa-upload"></i>
+            <input type="file" (change)="selectFile($event)">
+            <span>Los Archivos no deben pesar mas de 5MB</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

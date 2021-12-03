@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>ACTUALIZAR TAREA</h2>
+<mat-dialog-content class="mat-typography" style="width: 350px;">
+  <form action="">
+    <input type="hidden" name="id" [(ngModel)]="data.codigoTarea">
+    <div class="mb-2">
+      <label class="mb-1" for="nombre">Nombre de Tarea</label>
+      <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="data.nombre">
+    </div>
+    <div class="mb-2">
+      <label class="mb-1" for="fecha">Fecha de Tarea</label>
+      <input type="date" name="fecha" id="fecha" class="form-control" [(ngModel)]="data.fechaTarea">
+    </div>
+    <div class="mb-2">
+      <label class="mb-1" for="desp">Descripcion de Tarea</label>
+      <textarea name="desp" id="desp" cols="30" rows="5" class="form-control" [(ngModel)]="data.descripcion"></textarea>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Agregar Tarea</button>
+</mat-dialog-actions>
+

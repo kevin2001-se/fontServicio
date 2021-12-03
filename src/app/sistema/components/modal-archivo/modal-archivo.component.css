@@ -1,0 +1,35 @@
+form{
+  padding: 1em;
+}
+.ctn-file{
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ctn-file input[type='file']{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ctn-file i{
+  font-size: 4em;
+  color: #95a5a6;
+  margin-bottom: 12px;
+}
+
+.ctn-file span{
+  color:#95a5a6;
+  font-size: 13px;
+}

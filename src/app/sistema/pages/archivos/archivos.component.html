@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex justify-content-between alifn-items-center py-3">
+          <h3 class="mb-0">
+            Mis Archivos
+          </h3>
+          <button mat-fab (click)="reload()"><i class="fas fa-sync"></i></button>
+          <button mat-raised-button color="primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-plus mr-1"></i>Agregar Archivo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-3" *ngFor="let item of lista">
+    <div class="card content-file">
+      <div class="card-body">
+        <div class="d-flex flex-column align-items-center">
+          <i class="far fa-file-word icon-file"></i>
+          <span class="d-block name-file" style="word-break: break-word;">
+            {{ item.nombre }}
+          </span>
+          <span class="d-block size-file">
+            30 MB
+          </span>
+          <div class="d-flex justify-content-around w-100">
+            <button mat-mini-fab color="warn">
+              <i class="fas fa-download"></i>
+            </button>
+            <button mat-mini-fab color="accent" (click)="eliminarArchivo(item.codigoArchivo)"><i class="far fa-trash-alt"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
