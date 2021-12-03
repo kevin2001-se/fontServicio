@@ -5,7 +5,7 @@ import { Archivo } from '../../interfaces/archivo.interface';
 import { Usuario } from '../../interfaces/usuario.interface';
 import { ArchivosComponent } from '../../pages/archivos/archivos.component';
 
-
+let numeber = JSON.parse(localStorage.getItem("auth")!);
 @Component({
   selector: 'app-modal-archivo',
   templateUrl: './modal-archivo.component.html',
@@ -26,6 +26,7 @@ export class ModalArchivoComponent {
   }
 
   selectFile(event: any){
+
     const file = event.target.files[0];
     const formData = new FormData()
     formData.append("files", file)
@@ -34,7 +35,7 @@ export class ModalArchivoComponent {
     const tamaño = Math.ceil(file.size*(1.0/1024)).toString()
     this.archivo.nombre = nombre;
     this.archivo.tamaño = tamaño;
-    this.archivo.usuario.codigoUsu = 1;
+    this.archivo.usuario.codigoUsu = numeber.codigoUsu;
     console.log(tamaño)
 
     this.archivoServicio.registrarArchivo(this.archivo).subscribe(
